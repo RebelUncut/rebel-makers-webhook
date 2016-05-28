@@ -1,0 +1,656 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+// These are the wrong way around because Kevin didn't abstract variables out enough
+
+$purple: #E91E63;
+$pink: $purple;
+
+// Base 
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "futura-pt", sans-serif !important;
+	}
+
+	body {
+		font-size: 18px;
+	}
+
+	.wrapper { 
+		@include outer-container;
+		max-width: 80rem;
+		&.outer {
+			padding: 0 5.8538rem;;
+		}
+	}
+
+	@mixin button($color: $purple, $text: white) {
+		background: $color;
+		color: $text;
+		padding: 0.5em 1em;
+		display: inline-block;
+		@include transition;
+		&:hover {
+			background:darken($color, 10%);
+			@include transition;
+		}
+	}
+
+// Header
+
+	header {
+		background: white;
+		padding: 1em 0;
+		.flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		img {
+			height: 5rem;
+			display: block;
+		}
+		.copy {
+			color: $purple;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: 1.5rem;
+			* {
+				font-weight: normal;
+			}
+			h1 {
+				margin-bottom: 0;
+				font-size: 1.5rem;
+				margin-top: 0.5rem;
+			}
+			h2 {
+				margin-top: 0.25rem;
+				a {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	ul.nav {
+		background: $purple;
+		width: 100%;
+		padding: 0.75rem 0;
+		a {
+			color: white;
+			&.more {
+				font-family: "FontAwesome";
+				cursor: pointer;
+			}
+		}
+		li {
+			display: inline;
+			margin-right: 1em;
+			float: left;
+			ul {
+				
+			}
+		}
+		.toggle-menu {
+			display: none;
+		}
+	}
+	
+// Hero
+
+	#hero {
+		background: 
+			linear-gradient(
+				to bottom,
+				rgba($purple, 0.6),
+				rgba($purple, 0.6)),
+				url("/static/images/hero.jpg");
+		background-size: cover;
+		background-position: top right; 
+		padding: 10vh 0; 
+		* {
+			color: white;
+			text-align: center;
+		}
+		h1 {
+			font-size: 12.5vh; 
+			margin-bottom: 5vh;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		h2 {
+			margin-bottom: 0;
+			font-weight: 400;
+		}
+		.programmes {
+			@include span-columns(12);
+			a {
+				@include span-columns(6 of 12);
+				border: 2px solid white;
+				border-radius: 5px;
+				padding: 1.5rem;
+				@include transition;
+				h2 {
+					font-size: 1.5rem;
+					font-weight: bold;
+				}
+				p {
+					margin-top: 1rem;
+				}
+				.more {
+					background: white;
+					color: $purple;
+					padding: 0.25em 0.5em;
+					display: inline-block;
+					border-radius: 2.5px;
+				}
+				&:hover {
+					@include transition;
+					background: rgba($purple, 0.5);
+				}
+			}
+		}
+	}
+	
+	#what {
+		@include outer-container;
+		padding: 3rem 0;
+		text-align: left;
+		font-size: 1.25em;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	
+	input,
+	textarea {
+		padding: 0.5rem;
+		border-radius: 0.25em;
+		border: 0;
+		outline: 0;
+		box-shadow: 0;
+		&[type="submit"] {
+			background: $purple;
+			color: white;
+			@include transition;
+			&:hover {
+				cursor: pointer;
+				background: darken($purple, 10%);
+				@include transition;
+			}
+		}
+	}
+
+	
+	.email-block {
+		background: lightgrey;
+		padding: 1rem 0;
+		text-align: center;
+		h2,
+		form, 
+		input  {
+			display: inline;
+		}
+		h2 {
+			font-size: 1rem;
+			margin: 0;
+		}
+		input[type="email"] {
+			min-width: 40%;
+			max-width: 40%;
+			margin: 0 1rem;
+			outline: 0;
+			box-shadow: none;
+			border: 0;
+		}
+		input[type="submit"] {
+			padding: 0.65em;
+			display: inline-block;
+			margin-top: -5px;
+			font-weight: normal;
+		}
+	}
+
+// List
+
+%icon-list {
+	@include span-columns(12);
+	padding: $gutter;
+	h2 {
+		font-size: 1.5em;
+	}
+	li {
+		@include span-columns(4 of 12);
+		img {
+			@include span-columns(1.5 of 4);
+			margin-bottomx: 1em;
+		}
+		h3, p {
+			@include span-columns(4 of 4);
+		}
+		h3 {
+			font-size: 2.25rem;
+			font-family: "akula", sans-serif !important;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.follow-on {
+		display: flex;
+		justify-content: flex-start;
+	}
+	a.more {
+		text-align: center;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+		display: block;
+		background: white;
+		color: $pink;
+		padding: 0.5em 1em;
+	}
+}
+
+section#ethos {
+	background: $purple;
+	padding: 3rem 0;
+	margin-top: 0 !important;
+	* {
+		color: white;
+	}
+	ul {
+		counter-reset: my-badass-counter;
+		li {
+			padding-left: 2.125em;
+		}
+		li:before {
+			content: counter(my-badass-counter);
+			counter-increment: my-badass-counter;
+			float: left;
+			margin-left: -1em;
+			font-size: 2em;
+			line-height: 3rem;
+			font-family: "Bangers";
+			color: white;
+		}
+		h3 {
+			margin: 1em 0 0 0;
+		}
+	}
+}
+
+section#features {
+	h1 {
+		@include span-columns(12);
+		margin-top: 1em;
+	}
+	ul {
+		@include span-columns(6 of 12);
+		margin-bottom: 2rem;
+		h2 {
+			font-size: 1.5em;
+		}
+		li {
+			img {
+				float: left;
+				height: 2.5rem;
+			}
+			.content{
+				float: left;
+				width: 100%;
+				margin-top: 0.75em;
+			}
+			h3 {
+				float: left;
+				padding-bottom: 0.25em; 
+				color: $purple;
+				margin-bottom: 0.25em;
+			}
+			p {
+				width: 100%;
+				float: left;
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}
+
+section#community {
+	background: 
+		linear-gradient(
+			to top,
+			rgba(white, 1),
+			transparent),
+			url(/static/images/footer.jpg) center scroll;
+		background-size: cover;
+		padding: 4em 0 7em;
+		margin-bottom: -4em;
+	* {
+		color: white;
+		text-shadow: 1px 1px 1px black;
+	}
+	h1 {
+		margin-bottom: 0.5rem;
+		font-size: 3rem;
+		font-family: "Bangers", sans-serif !important;
+	    font-weight: normal;
+    	letter-spacing: 1px;
+	}
+	h2 {
+		font-weight: normal;
+		font-size: 1.25em;
+	}
+	.links {
+		@include span-columns(12);
+		.link {
+			@include span-columns(6 of 12);
+			p {
+				margin-bottom: 1em;
+				display: block;
+			}
+			a {
+				background: white;
+				color: $purple;
+				padding: 0.5em 0.75em;
+				&.disabled {
+					background: #B6B6B5;
+					cursor: default;
+					pointer-events: none;
+				}
+			}
+			i {
+				font-family: "FontAwesome" !important;
+				color: $purple;
+				font-size: 0.9em;
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+
+.pre-footer {
+	li {
+		display: inline;
+		margin: 0;
+		a {
+			padding: 1em;
+			display: inline-block;
+			margin: 0;
+			color: $purple;
+			&:hover,
+			&.section {
+				background: $purple;
+				color: white;
+			}
+			&.section {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+footer {
+	background: $purple;
+	padding: 1.5em 0;
+	.flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	a.logo {
+		display: block;
+	}
+	img {
+		height: 3rem;
+		display: block;
+	}
+	h2 {
+		color: white;
+		font-family: "Bangers", sans-serif !important;
+		font-size: 3rem;
+		font-weight: normal;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+}
+
+.copy-page {
+	padding-top: 2.5em !important;
+}
+
+// Page
+
+h1 {
+	font-size: 2em;
+}
+
+.page-title {
+	h1 {
+		color: $purple;
+		font-size: 2.5rem;
+		margin-bottom: 1em;
+		font-family: "Bangers", sans-serif !important;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	img {
+		height: 7.5em;
+		margin-bottom: 2em;
+	}
+}
+
+#what,
+#copy {
+	h1:not(:first-child) {
+		margin-top: 0.75em;
+	}
+}
+
+#images {
+	@include span-columns(5 of 12);
+	@include shift(1 of 12);
+	margin-top: 0.5em;
+	img {
+		margin-bottom: 1em;
+	}
+}
+
+#what h2 {
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+
+#copy {
+	@include span-columns(6 of 12);
+	margin-bottom: 2.5em;
+	p {
+		margin-bottom: 1em;
+	}
+	ul {
+		margin-bottom: 1em;
+		li {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+	}
+}
+
+#ethos {
+	margin-top: 1em;
+	@include span-columns(12);
+}
+
+// Clubs
+
+#key {
+	ul {
+		@include span-columns(12);
+		margin-bottom: 2.5rem;
+		li {
+			@include span-columns(4);
+			@include omega(3n);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			img {
+				display: inline;
+				height: 1em;
+			}
+			p {
+				display: inline;
+				margin-bottom: 0;
+				&:before {
+					content: "=";
+					margin: 0 0.5em;
+				}
+			}
+		}
+	}
+}
+
+#clubs {
+	> ul {
+		> li {
+			@include span-columns(12);
+			margin-bottom: 3rem;
+			.img {
+				@include span-columns(4 of 12);
+				img {
+					width: 100%;
+				}
+			}
+			.content {
+				@include span-columns(8 of 12);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.name {
+					font-size: 1.75em;
+					font-weight: bold;
+					margin-bottom: 0.75rem;
+					line-height: 0.8;
+				}
+				.loc {
+					margin-top: 0;
+					margin-bottom: 0.25em;
+				}
+				.desc {
+					margin-top: 0;
+					a {
+						color: $pink;
+						text-decoration: underline;
+					}
+				}
+				.id {
+					display: none;
+				}
+				ul.incl {
+					@include span-columns(8 of 8);
+					margin-bottom: 1em;
+					@mixin club-icon($name) {
+						&.#{$name} {
+							background-image: url(/img/#{$name}.svg);
+						}
+					}
+					li {
+						@include span-columns(8 of 8);
+						height: 1em;
+						width: 1em;
+						background-size: contain;
+						background-repeat: no-repeat;
+						@include club-icon(skills);
+						@include club-icon(projects-single);
+						@include club-icon(community);
+						@include club-icon(projects-group);
+						@include club-icon(hw-hub);
+						@include club-icon(workshops);
+					}
+				}
+				.flex {
+					@include span-columns(8 of 8);
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-self: flex-end;
+					a.eventbrite {
+						color: white;
+						background: $pink;
+						padding: 0.5em 0.75em;
+					}
+					a.contact {
+						align-self: center;
+						color: $pink;
+						margin-left: 1em;
+						text-decoration: underline;
+						&:hover,
+						&:focus {
+							color: $pink;
+						}
+					}
+				}
+			}
+		}
+	}
+	#new-club h2 {
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 2.25rem;
+		font-weight: normal;
+		a {
+			color: $pink;
+			text-decoration: underline;
+		}
+	}
+}
+
+#copy ul.contact {
+	li {
+		list-style: none;
+		margin-left: 0;
+		a {
+			color: $purple;
+		}
+	}
+}
+
+// Ethos
+
+a.email-us {
+	@include button($pink);
+	font-size: 1.25em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.bangers {
+	font-family: "Bangers", sans-serif !important;
+}
+
+.copy-page.new #faq {
+	margin-left: 0;
+    margin-top: 2em;
+    width: 100%;
+}
+
+@import "clubs";
+@import "new";
+@import "cms-page";
+@import "res-tablet";

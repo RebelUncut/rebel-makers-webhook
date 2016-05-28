@@ -1,0 +1,18 @@
+<header>
+  <div class="wrapper outer">
+    <div class="flex"><a href="/" class="logo"><img src="/static/images/logo-pink.svg" alt="Rebel Makers Logo"></a>
+      <div class="copy">
+        <h1>Playing, building, learning. For everyone.</h1>
+        <h2>A project by <a href="http://rebellabs.co.uk">Rebel Labs</a></h2>
+      </div>
+    </div>
+  </div>
+</header>
+<ul class="nav">
+  <div class="toggle-menu"><a>Show Menu</a></div>
+  <div class="wrapper outer">
+    {% for link in cms.navigation.top_nav %}
+      <li><a href="{{ link.link }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </div>
+</ul>

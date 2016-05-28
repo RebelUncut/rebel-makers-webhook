@@ -1,0 +1,16 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.files.name }}{% endblock %}
+{% block content %}
+  <div class="wrapper outer copy-page">
+    <div class="page-title">
+      <h1>{{ cms.files.name }}</h1>
+    </div>
+    <section id="copy">
+      <ul class="contact">
+        {% for row in cms.files.file_upload %}
+          <li>{{ row.name }}: <a href="{{ row.file.url }}">{{ row.file.url }}</a></li><br>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+{% endblock %}

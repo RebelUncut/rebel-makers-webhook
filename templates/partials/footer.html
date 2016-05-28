@@ -1,0 +1,15 @@
+<div class="pre-footer">
+  <ul class="wrapper outer">
+    <li><a class="section">Find out about</a></li>
+    {% for link in cms.navigation.bottom_nav %}
+      <li><a href="{{ link.link }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<footer>
+  <div class="wrapper outer">
+    <div class="flex"><a href="http://rebellabs.co.uk" class="logo"><img src="/static/images/rebellabswhite.svg" alt="Rebel Labs Logo"></a>
+      <h2>#JoinTheRebellion</h2>
+    </div>
+  </div>
+</footer>

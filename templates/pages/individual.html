@@ -1,0 +1,10 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ item.name }}{% endblock %}
+{% block content %}
+  <div class="wrapper outer copy-page cms-page">
+    <div class="page-title">
+      <h1>{{ item.name }}</h1>
+    </div>
+    <section id="copy">{{ item.content|safe }}</section>
+</div>
+{% endblock %}

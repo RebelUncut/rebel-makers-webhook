@@ -1,0 +1,16 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.about.name }}{% endblock %}
+{% block content %}
+  <div class="wrapper outer copy-page">
+    <div class="page-title">
+      <h1>{{ cms.about.name }}</h1>
+    </div>
+    <section id="copy">{{ cms.about.copy|safe }}</section>
+    <section id="images">
+      {% for image in cms.about.images %}
+        <img src="{{ image.url }}">
+      {% endfor %}
+    </section>
+</div>
+</div>
+{% endblock %}

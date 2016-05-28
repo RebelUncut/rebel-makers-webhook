@@ -1,0 +1,108 @@
+.cards {
+  width: calc(100% + 2em);
+  margin-left: -1em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 0 !default;
+  $base-background-color: white !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $card-border-color: $base-border-color;
+  $card-border: 1px solid $card-border-color;
+  $card-background: lighten($card-border-color, 10%);
+  $card-header-background: $card-background;
+  $card-margin: 1em;
+  $card-image-hover-opacity: 0.7;
+  $card-image-hover-color: #F8F2B4;
+
+  background-color: $card-background;
+  border: $card-border;
+  border-radius: 0;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 $card-margin $base-spacing $card-margin;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  .card-image {
+    max-height: 20vw;
+    overflow: hidden;
+    height: 20vw;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-header {
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+    transition: all 0.2s ease-in-out;
+    * {
+      font-size: inherit;
+    }
+    h1 {
+      margin-top: 0.125em;
+      margin-bottom: 0.25em;
+      font-size: 1.25em;
+    }
+    h2 {
+      margin-bottom: 0.25em;
+      font-weight: normal;
+    }
+  }
+
+  .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
+    }
+    a {
+      color: $purple; 
+    }
+    .fa-li {
+      width: 1em;
+      top: 0.25em;
+      text-align: left;
+    }
+    i:before {
+      font-family: "FontAwesome";
+      font-size: 0.8em;
+    }
+  }
+
+  a.register {
+    background: $purple;
+    color: white;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid #ddd;
+    @include transition;
+    &:hover {
+      @include transition;
+      background: darken($purple, 10%);
+    }
+  }
+
+  &:active {
+    background-color: $card-background;
+
+    .card-header {
+      background-color: $card-background;
+    }
+  }
+}

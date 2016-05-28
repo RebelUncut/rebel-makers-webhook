@@ -1,0 +1,86 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - Home{% endblock %}
+{% block content %}
+  <section id="hero">
+    <div class="wrapper outer">
+      <h1>{{ cms.home.hero_title }}</h1>
+  </section>
+  <div class="email-block">
+    <div class="wrapper outer">
+      <h2>Register for updates</h2>
+      <form action="//rebeluncut.us12.list-manage.com/subscribe/post?u=e6f5b0f5a25d37d333f71a382&amp;id=61a4508330" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e6f5b0f5a25d37d333f71a382_61a4508330" tabindex="-1" value=""></div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <section id="what">
+    <div class="wrapper outer">
+      <p>{{ cms.home.what_is }}</p>
+    </div>
+  </section>
+  <section id="ethos">
+    <ul class="core">
+      <div class="wrapper outer">
+        <h1>Our core values</h1>
+        {% for row in cms.home.core_values %}
+          <li>
+            <h3>{{ row.title }}</h3>
+            <p>{{ row.copy }}</p>
+          </li>
+        {% endfor %}
+      </div>
+    </ul>
+  </section>
+  <div class="wrapper outer">
+    <section id="features">
+      <h1>What to expect at a Rebel Makers Club?</h1>
+      <ul>
+        <h2>Every club</h2>
+        <li><img src="/static/images/skills.svg">
+          <div class="content"></div>
+          <h3>Skills exchange</h3>
+          <p>Gain validation by sharing knowledge you already have while learning and experimenting with new skills and tech. </p>
+        </li>
+        <li><img src="/static/images/projects-single.svg">
+          <div class="content"></div>
+          <h3>Work on projects</h3>
+          <p>If you've got a project which you want to start or continue, use our Clubs as a great space to be productive and get support.</p>
+        </li>
+        <li><img src="/static/images/community.svg">
+          <div class="content">
+            <h3>Awesome community</h3>
+            <p>Joining the Rebellion means meeting, learning and sharing with lots of brilliant, like-minded people.</p>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <h2>Opt-in</h2>
+        <li><img src="/static/images/projects-group.svg">
+          <div class="content">
+            <h3>Club projects</h3>
+            <p>These will be on-going and decided by each Club as a whole, giving every Rebel the chance to work on a group project. </p>
+          </div>
+        </li>
+        <li><img src="/static/images/hw-hub.svg">
+          <div class="content">
+            <p>Hardware Hubs will offer a variety of kit and gadgets for Rebels to experiment with.</p>
+          </div>
+        </li>
+        <li><img src="/static/images/workshops.svg">
+          <div class="content">
+            <h3>Workshops</h3>
+            <p>Workshops are great ways to give deeper insight into specific areas of the tech world, or kickstart new skills. </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <section id="community">
+    <div class="wrapper outer">
+      <h1>{{ cms.home.bottom_title }}</h1>
+      <h2>{{ cms.home.bottom_copy }}</h2>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - Clubs{% endblock %}
+
+{% block content %}
+
+  {% set data = cms.clubs %}
+
+  {% set data = data|sort('name') %}
+
+<div class="wrapper outer copy-page">
+  <div class="page-title"> 
+    <h1>Our Monthly Clubs</h1>
+  </div>
+  <section id="clubs">
+    <div class="cards">
+      {% for object in data %}
+        <div class="card">
+          <div style="background-image: url({{ object.image.url }})" class="card-image"></div>
+          <div class="card-header">
+            <h1>{{ object.name }}</h1>
+            <h2>{{ object.city }}</h2>
+          </div>
+          <div class="card-copy">
+            <p>{{ object.description }}</p>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-map-marker"></i> <a href="{{ object.location_url }}" target="_blank">{{ object.location_name }}</a></li>
+              <li><i class="fa-li fa fa-clock-o"></i> {{ object.frequency }}</li>
+              <li><i class="fa-li fa fa-shield"></i> {{ object.contact_name }} - <a href="mailto:{{ object.contact_email }}">{{ object.contact_email }}</a></li>
+              <li><i class="fa-li fa fa-twitter"></i> <a href="https://twitter.com/search?f=tweets&amp;q=%23{{ object.hashtag }}" target="_blank">#{{ object.hashtag }}</a></li>
+              <li class="register"><i class="fa-li fa fa-paper-plane"></i> <a href="{{ object.register_link }}">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+
+{% endblock %}

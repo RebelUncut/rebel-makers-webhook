@@ -1,0 +1,91 @@
+.copy-page.new {
+	h1.subtitle {
+		color: $purple;
+		font-family: "Bangers", sans-serif !important;
+		font-weight: normal;
+		letter-spacing: 1px;
+		font-size: 1.5em;
+		i {
+			font-family: "FontAwesome" !important;
+			font-size: 0.8;
+		}
+	}
+	form {
+		h1 {
+			margin: 1em 0;
+			color: white !important;
+			background: $purple;
+			padding: 0.5em;
+			font-family: "Bangers" !important;
+			font-size: 2em;
+		}
+		.input-group {
+			margin-bottom:1em;
+			input,
+			textarea {
+				box-shadow: none;
+				outline: none;
+				border: 1px solid lightgrey;
+				&:focus {
+					border-color: $purple;
+				}
+			}
+		}
+		input[type="submit"]:active,
+		input[type="submit"]:focus {
+			background: darken($purple, 20%);
+		}
+	}
+	#faq {
+		@include span-columns(5 of 12);
+		@include shift(1 of 12);
+		background: $purple;
+		padding: 1em;
+		margin-top: 0.25em;
+		* {
+			color: white;
+		}
+		h2 {
+			font-family: "Bangers" !important;
+			font-weight: normal;
+			font-size: 1.5em;
+			letter-spacing: 1px;
+		}
+		ul {
+			li {
+				display: block;
+				font-size: 1.5em;
+				margin-bottom: 0.5em;
+				cursor: pointer;
+				font-weight: bold;
+				&:nth-last-child(2) {
+					margin-bottom: 0;
+				}
+			}
+			.faq-section {
+				display: none;
+				&.active {
+					display: block;
+				}
+				dt {
+					font-weight: normal;
+					text-decoration: underline;
+				}
+				dd {
+					margin-bottom: 1em;
+				}
+			}
+		}
+		&.faq--club {
+			dl {
+				margin-bottom: 0;
+			}
+			dt:first-child {
+				margin-top: 0 !important;
+			}
+			dd:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
