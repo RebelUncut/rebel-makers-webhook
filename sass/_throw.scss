@@ -1,0 +1,14 @@
+a.launch-blog {
+	color: white;
+	text-align: center;
+	padding: 0.75em;
+	background: #00B5A1;
+	display: block;
+	width: 100%;
+	font-size: 1.25em;
+	@include transition;
+	&:hover {
+		background: darken(#00B5A1, 10%);
+		@include transition;
+	}
+}

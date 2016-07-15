@@ -1,0 +1,80 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - FAQs{% endblock %}
+{% block content %}
+  <div class="wrapper outer copy-page new">
+    <div class="page-title"> 
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <section id="copy">
+      <div class="summary">
+        <h2>Skip to section</h2>
+        <ul>
+          <li>
+            <a href="#general">General questions</a>
+          </li>
+          <li>
+            <a href="#leaders">Questions for Club Leaders</a>
+          </li>
+          <li>
+            <a href="#participants">Questions for Participants</a>
+          </li>
+          <li>
+            <a href="#safeguarding">Questions about Safeguarding</a>
+          </li>
+          <li>
+            <a href="#labs">Questions about Rebel Labs</a>
+          </li>
+        </ul>
+      </div>
+      <section id="faq">
+        <ul>
+          <li class="general" id="general">General questions</li>
+          <div class="faq-section general">
+            {% for question in cms.runyourown.faq__general %}
+              <div class="item">
+              <dt>{{ question.q }}</dt>
+              <dd>{{ question.a }}</dd>
+              </div>
+            {% endfor %}
+          </div>
+          <li class="leaders" id="leaders">Questions for Club Leaders</li>
+          <div class="faq-section leaders">
+            {% for question in cms.runyourown.faq__club_leaders %}
+              <div class="item">
+                <dt>{{ question.q }}</dt>
+                <dd>{{ question.a }}</dd>
+              </div>
+            {% endfor %}
+          </div>
+          <li class="participants" id="participants">Questions for Participants</li>
+          <div class="faq-section participants">
+            {% for question in cms.runyourown.faq__participants %}
+              <div class="item">
+                <dt>{{ question.q }}</dt>
+                <dd>{{ question.a }}</dd>
+              </div>
+            {% endfor %}
+          </div>
+          <li class="safeguarding" id="safeguarding">Questions about Safeguarding</li>
+          <div class="faq-section safeguarding">
+            {% for question in cms.runyourown.faq__safeguarding %}
+              <div class="item">
+                <dt>{{ question.q }}</dt>
+                <dd>{{ question.a }}</dd>
+              </div>
+            {% endfor %}
+          </div>
+          <li class="labs" id="labs">Questions about Rebel Labs</li>
+          <div class="faq-section labs">
+            {% for question in cms.runyourown.faq__rebel_labs %}
+              <div class="item">
+                <dt>{{ question.q }}</dt>
+                <dd>{{ question.a }}</dd>
+              </div>
+            {% endfor %}
+          </div>
+        </ul>
+      </section>
+    </section>
+  </div>
+{% endblock %}

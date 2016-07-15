@@ -125,6 +125,7 @@
 			h2 {
 				margin-top: 1em;
 				font-size: 1.25rem;
+				margin-bottom: 0;
 			}
 			.links .link {
 				width: 100%;
@@ -280,6 +281,28 @@
 		height: 30vh;
 		max-height: 30vh;
 	}
+
+	.copy-page.new.camp #copy p.inner-point,
+	.copy-page.new.camp #form {
+		width: 100%;
+	}
+
+	#hero.camp h1 {
+		font-size: 1.5rem;
+	}
+
+	#hero.camp h2,
+	.copy-page.new.camp #copy .main,
+	.copy-page #copy h1,
+	a.launch-blog {
+		font-size: 1rem;
+	}
+
+	.copy-page.new.camp #copy p.inner-point {
+	    margin-bottom: 2em;
+	    display: block;
+	}
+
 
 }
 

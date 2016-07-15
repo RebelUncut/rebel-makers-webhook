@@ -304,19 +304,21 @@ ul.nav .toggle-menu {
   background: linear-gradient(to bottom, rgba(233, 30, 99, 0.6), rgba(233, 30, 99, 0.6)), url("/static/images/hero.jpg");
   background-size: cover;
   background-position: top right;
-  padding: 10vh 0;
+  padding: 5em 0;
 }
 #hero * {
   color: white;
   text-align: center;
 }
 #hero h1 {
-  font-size: 12.5vh;
-  margin-bottom: 5vh;
+  font-size: 3em;
+  margin-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 #hero h2 {
+  font-size: 1.5em;
+  margin-top: 1rem;
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -363,6 +365,11 @@ ul.nav .toggle-menu {
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
   background: rgba(233, 30, 99, 0.5);
+}
+#hero.camp {
+  background: linear-gradient(to bottom, rgba(233, 30, 99, 0.6), rgba(233, 30, 99, 0.6)), url("http://i.imgur.com/kFzJhBp.gif");
+  background-size: cover;
+  background-position: center center;
 }
 
 #what {
@@ -516,7 +523,7 @@ section#community {
 }
 section#community * {
   color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }
 section#community h1 {
   margin-bottom: 0.5rem;
@@ -527,7 +534,7 @@ section#community h1 {
 }
 section#community h2 {
   font-weight: normal;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 section#community .links {
   float: left;
@@ -577,6 +584,7 @@ section#community .links .link i {
   display: inline-block;
   margin: 0;
   color: #E91E63;
+  font-size: 0.8em;
 }
 .pre-footer li a:hover, .pre-footer li a.section {
   background: #E91E63;
@@ -589,6 +597,7 @@ section#community .links .link i {
 footer {
   background: #E91E63;
   padding: 1.5em 0;
+  margin-bottom: -2px;
 }
 footer .flex {
   display: flex;
@@ -605,7 +614,7 @@ footer img {
 footer h2 {
   color: white;
   font-family: "Bangers", sans-serif !important;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: normal;
   letter-spacing: 1px;
   margin-bottom: 0;
@@ -671,7 +680,7 @@ h1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
+  width: 74.41059%;
   margin-bottom: 2.5em;
 }
 #copy:last-child {
@@ -679,6 +688,9 @@ h1 {
 }
 #copy p {
   margin-bottom: 1em;
+}
+#copy p a {
+  color: #E91E63;
 }
 #copy ul {
   margin-bottom: 1em;
@@ -1039,21 +1051,32 @@ a.email-us:hover {
 .copy-page.new form input[type="submit"]:focus {
   background: #930e3b;
 }
+.copy-page.new #copy .summary {
+  margin-top: 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.copy-page.new #copy .summary ul li {
+  list-style-type: none;
+  margin-left: 0;
+}
+.copy-page.new #copy .summary a {
+  color: #E91E63;
+}
+.copy-page.new #copy .summary a:hover {
+  color: #c1134e;
+}
 .copy-page.new #faq {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 40.29137%;
-  margin-left: 8.5298%;
-  background: #E91E63;
-  padding: 1em;
-  margin-top: 0.25em;
+  width: 100%;
 }
 .copy-page.new #faq:last-child {
   margin-right: 0;
 }
 .copy-page.new #faq * {
-  color: white;
+  color: #E91E63;
 }
 .copy-page.new #faq h2 {
   font-family: "Bangers" !important;
@@ -1067,22 +1090,32 @@ a.email-us:hover {
   margin-bottom: 0.5em;
   cursor: pointer;
   font-weight: bold;
-}
-.copy-page.new #faq ul li:nth-last-child(2) {
-  margin-bottom: 0;
+  margin-left: 0;
 }
 .copy-page.new #faq ul .faq-section {
-  display: none;
-}
-.copy-page.new #faq ul .faq-section.active {
   display: block;
+  margin-bottom: 2em;
+}
+.copy-page.new #faq ul .faq-section .item {
+  margin-bottom: 0.5em;
 }
 .copy-page.new #faq ul .faq-section dt {
-  font-weight: normal;
-  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+.copy-page.new #faq ul .faq-section dt:before {
+  content: "\f067";
+  font-family: "FontAwesome";
+  margin-right: 1em;
+  font-size: 0.8em;
+}
+.copy-page.new #faq ul .faq-section dt.active:before {
+  content: "\f068";
 }
 .copy-page.new #faq ul .faq-section dd {
   margin-bottom: 1em;
+  color: black;
 }
 .copy-page.new #faq.faq--club dl {
   margin-bottom: 0;
@@ -1092,6 +1125,46 @@ a.email-us:hover {
 }
 .copy-page.new #faq.faq--club dd:last-child {
   margin-bottom: 0;
+}
+.copy-page.new.camp #copy {
+  text-align: center;
+  width: 100%;
+  margin-right: 0;
+}
+.copy-page.new.camp #copy .main {
+  font-size: 1.15em;
+  margin-bottom: 2em;
+}
+.copy-page.new.camp #copy ul li {
+  list-style-type: none;
+}
+.copy-page.new.camp #copy p.inner-point {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.copy-page.new.camp #form {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3em;
+}
+.copy-page.new.camp #form h1, .copy-page.new.camp #form p {
+  text-align: center;
+}
+.copy-page.new.camp form {
+  display: block;
+  margin-bottom: 2rem;
+  border-top: 1px solid lightgrey;
+  padding-top: 2em;
+  margin-top: 2em;
+}
+.copy-page.new.camp form h1.subtitle {
+  width: 100%;
+  float: left;
+}
+.copy-page.new.camp form textarea {
+  text-align: left;
 }
 
 .cms-page #copy {
@@ -1110,6 +1183,9 @@ a.email-us:hover {
 .cms-page #copy h3 {
   font-size: 1.5em;
 }
+.cms-page #copy a {
+  color: #E91E63;
+}
 .cms-page #copy figure {
   margin: 0;
 }
@@ -1117,6 +1193,25 @@ a.email-us:hover {
   width: 100%;
   margin-top: 0;
   margin-bottom: 2em;
+}
+
+a.launch-blog {
+  color: white;
+  text-align: center;
+  padding: 0.75em;
+  background: #00B5A1;
+  display: block;
+  width: 100%;
+  font-size: 1.25em;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+a.launch-blog:hover {
+  background: #008274;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
 }
 
 @media screen and (max-width: 960px) {
@@ -1232,6 +1327,7 @@ a.email-us:hover {
   section#community h2 {
     margin-top: 1em;
     font-size: 1.25rem;
+    margin-bottom: 0;
   }
   section#community .links .link {
     width: 100%;
@@ -1370,6 +1466,27 @@ a.email-us:hover {
   .card .card-image {
     height: 30vh;
     max-height: 30vh;
+  }
+
+  .copy-page.new.camp #copy p.inner-point,
+  .copy-page.new.camp #form {
+    width: 100%;
+  }
+
+  #hero.camp h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero.camp h2,
+  .copy-page.new.camp #copy .main,
+  .copy-page #copy h1,
+  a.launch-blog {
+    font-size: 1rem;
+  }
+
+  .copy-page.new.camp #copy p.inner-point {
+    margin-bottom: 2em;
+    display: block;
   }
 }
 

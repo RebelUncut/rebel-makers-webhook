@@ -36,14 +36,25 @@
 			background: darken($purple, 20%);
 		}
 	}
+	#copy .summary {
+		margin-top: 1em;
+		font-size: 1.25em;
+		font-weight: bold;
+		ul li {
+			list-style-type: none;
+			margin-left: 0;
+		}
+		a {
+			color: $purple;
+			&:hover {
+				color: darken($purple, 10%);
+			}
+		}
+	}
 	#faq {
-		@include span-columns(5 of 12);
-		@include shift(1 of 12);
-		background: $purple;
-		padding: 1em;
-		margin-top: 0.25em;
+		@include span-columns(12 of 12);
 		* {
-			color: white;
+			color: $purple;
 		}
 		h2 {
 			font-family: "Bangers" !important;
@@ -58,21 +69,31 @@
 				margin-bottom: 0.5em;
 				cursor: pointer;
 				font-weight: bold;
-				&:nth-last-child(2) {
-					margin-bottom: 0;
-				}
+				margin-left: 0;
 			}
 			.faq-section {
-				display: none;
-				&.active {
-					display: block;
+				display: block;
+				margin-bottom: 2em;
+				.item {
+					margin-bottom: 0.5em;
 				}
 				dt {
-					font-weight: normal;
-					text-decoration: underline;
+					font-weight: bold;
+					cursor: pointer;
+					color: #333;
+					&:before {
+						content: "\f067";
+						font-family: "FontAwesome";
+						margin-right: 1em;
+						font-size: 0.8em;
+					}
+					&.active:before {
+						content: "\f068";
+					}
 				}
 				dd {
 					margin-bottom: 1em;
+					color: black;
 				}
 			}
 		}
@@ -85,6 +106,48 @@
 			}
 			dd:last-child {
 				margin-bottom: 0;
+			}
+		}
+	}
+	&.camp {
+		#copy {
+			text-align: center;
+			width: 100%;
+			margin-right: 0;
+			.main {
+				font-size: 1.15em;
+				margin-bottom: 2em;
+			}
+			ul li {
+				list-style-type: none;
+			}
+			p.inner-point {
+				width:60%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		#form {
+			width: 60%;
+			margin: 0 auto;
+			display: block;
+			margin-bottom: 3em;
+			h1, p {
+				text-align: center;
+			}
+		}
+		form {
+			display: block;
+			margin-bottom: 2rem;
+			border-top: 1px solid lightgrey;
+			padding-top: 2em;
+			margin-top: 2em;
+			h1.subtitle {
+				width: 100%;
+				float: left;
+			}
+			textarea {
+				text-align: left;
 			}
 		}
 	}

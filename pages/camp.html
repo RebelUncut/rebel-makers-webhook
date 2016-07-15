@@ -1,0 +1,43 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - Camp{% endblock %}
+{% block content %}
+  <section id="hero" class="camp">
+    <div class="wrapper outer">
+      <h1>{{ cms.camp.name }}</h1>
+      <h2>{{ cms.camp.hero_subtitle }}</h2>
+    </div>
+  </section>
+  <a href="{{ cms.camp.cta_link }}" class="launch-blog" target="_blank">{{ cms.camp.cta_text }}</a>
+  <div class="wrapper outer copy-page new camp">
+    <section id="copy">
+      <p class="main">{{ cms.camp.introduction }}</p>
+        {% for phase in cms.camp.phase %}
+          <h1 class="subtitle">{{ phase.title }}</h1>
+          <p class="inner-point">
+            {{ phase.copy }}
+          </p>
+        {% endfor %}
+    </section>
+    <div id="form">
+      <h1>We want your thoughts!</h1>
+      <p>Regardless of the capacity in which you would like to be involved, we know you’ve got thoughts on how to make Rebel Makers Camp great - and we’d love to hear them!</p>
+      <form action="https://formspree.io/makerscamp@rebellabs.co.uk" method="POST">
+        <div class="input-group">
+          <label for="name">Your name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="input-group">
+          <label for="email">Email address</label>
+          <input type="email" name="_replyto" id="email">
+        </div>
+        <div class="input-group">
+          <label for="comments">What are your thoughts?</label>
+          <textarea rows="3" name="comments" id="comments"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Rebel Makers Camp - Thoughts">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="submit" value="Let's go!">
+      </form>
+    </div>
+  </div>
+{% endblock %}
