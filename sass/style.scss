@@ -4,8 +4,9 @@
 
 // These are the wrong way around because Kevin didn't abstract variables out enough
 
-$purple: #E91E63;
+$purple: #758CA0;
 $pink: $purple;
+$rm-accent: #E81F63;
 
 // Base 
 
@@ -322,7 +323,7 @@ section#features {
 			h3 {
 				float: left;
 				padding-bottom: 0.25em; 
-				color: $purple;
+				color: $rm-accent;
 				margin-bottom: 0.25em;
 			}
 			p {
