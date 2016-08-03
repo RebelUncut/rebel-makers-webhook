@@ -343,8 +343,7 @@ section#community {
 			transparent),
 			url(/static/images/footer.jpg) center scroll;
 		background-size: cover;
-		padding: 4em 0 7em;
-		margin-bottom: -4em;
+		padding: 4em 0 4em;
 	* {
 		color: white;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
@@ -358,7 +357,7 @@ section#community {
 	}
 	h2 {
 		font-weight: normal;
-		font-size: 1em;
+		font-size: 1.25em;
 	}
 	.links {
 		@include span-columns(12);
