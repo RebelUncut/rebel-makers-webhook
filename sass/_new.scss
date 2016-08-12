@@ -108,8 +108,13 @@
 				margin-bottom: 0;
 			}
 		}
-	}
+	} 
 	&.camp {
+		&#hero {
+			h2 {
+				line-height: 2;
+			}
+		}
 		#copy {
 			text-align: center;
 			width: 100%;

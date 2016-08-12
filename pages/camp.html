@@ -1,23 +1,38 @@
 {% extends "templates/partials/base.html" %}
 {% block title %}{% parent %} - Camp{% endblock %}
 {% block content %}
-  <section id="hero" class="camp">
+  <div class="big-hero camp">
     <div class="wrapper outer">
-      <h1>{{ cms.camp.name }}</h1>
-      <h2>{{ cms.camp.hero_subtitle }}</h2>
+      <h1>Rebel Makers Camp is an annual celebration of digital making for everyone.</h1>
+      <h2>Rebel Makers Camp is a one day festival comprising workshops, speakers, and the ability to work on your own projects with friends.</h2>
+      <h3>Our aim is to bring together people of all ages and abilities to share skills, discover technology and socialise in a range of fun and engaging ways.</h3>
     </div>
-  </section>
+  </div>
   <a href="{{ cms.camp.cta_link }}" class="launch-blog" target="_blank">{{ cms.camp.cta_text }}</a>
   <div class="wrapper outer copy-page new camp">
     <section id="copy">
+      <h2 class="info">October 29 2016, Univeristy of Birmingham.</h2>
       <p class="main">{{ cms.camp.introduction }}</p>
-        {% for phase in cms.camp.phase %}
-          <h1 class="subtitle">{{ phase.title }}</h1>
-          <p class="inner-point">
-            {{ phase.copy }}
-          </p>
-        {% endfor %}
     </section>
+    <ul id="blocks">
+      <li>
+        <h2>Workshops</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam dicta distinctio molestiae, minus, optio vero odio totam, natus suscipit, illum labore. Dolorem itaque inventore nostrum, ipsam necessitatibus beatae consequuntur!</p>
+      </li>
+      <li>
+        <h2>Talks</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam dicta distinctio molestiae, minus, optio vero odio totam, natus suscipit, illum labore. Dolorem itaque inventore nostrum, ipsam necessitatibus beatae consequuntur!</p>
+      </li>
+      <li>
+        <h2>Social</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsam dicta distinctio molestiae, minus, optio vero odio totam, natus suscipit, illum labore. Dolorem itaque inventore nostrum, ipsam necessitatibus beatae consequuntur!</p>
+      </li>
+    </ul>
+    <div class="brumhack">
+      <img src="/static/images/brumhack.png" alt="BrumHack Logo">
+      <p>This event is also partnered with BrumHack, now running their fifth event. Rebel Makers Camp is taking place in the same venue, meaning that attendees will get to also experience the amazing, collaborative 150-person hackathon.</p>
+      <a href="http://brumhack.co.uk">Visit BrumHack</a>
+    </div>
     <div id="form">
       <h1>We want your thoughts!</h1>
       <p>Regardless of the capacity in which you would like to be involved, we know you’ve got thoughts on how to make Rebel Makers Camp great - and we’d love to hear them!</p>

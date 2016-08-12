@@ -366,11 +366,6 @@ ul.nav .toggle-menu {
   transition: all 0.15s ease-out 0s;
   background: rgba(117, 140, 160, 0.5);
 }
-#hero.camp {
-  background: linear-gradient(to bottom, rgba(117, 140, 160, 0.6), rgba(117, 140, 160, 0.6)), url("http://i.imgur.com/kFzJhBp.gif");
-  background-size: cover;
-  background-position: center center;
-}
 
 #what {
   max-width: 68em;
@@ -1125,6 +1120,9 @@ a.email-us:hover {
 .copy-page.new #faq.faq--club dd:last-child {
   margin-bottom: 0;
 }
+.copy-page.new.camp#hero h2 {
+  line-height: 2;
+}
 .copy-page.new.camp #copy {
   text-align: center;
   width: 100%;
@@ -1211,6 +1209,156 @@ a.launch-blog:hover {
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
+}
+
+.big-hero.camp {
+  background: linear-gradient(to bottom, rgba(117, 140, 160, 0.6), rgba(117, 140, 160, 0.6)), url("http://i.imgur.com/kFzJhBp.gif");
+  background-size: cover;
+  background-position: center center;
+  padding: 4em 0;
+  color: white;
+  text-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+}
+.big-hero.camp h1 {
+  font-size: 2.5em;
+}
+.big-hero.camp h2 {
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+}
+.big-hero.camp h3 {
+  font-weight: normal;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 960px) {
+  .big-hero.camp {
+    font-size: 0.75em;
+    padding: 2em 0;
+  }
+  .big-hero.camp .wrapper.outer {
+    padding: 0 2rem;
+  }
+  .big-hero.camp h1 {
+    font-size: 2em;
+  }
+  .big-hero.camp h2 {
+    margin-bottom: 1em;
+  }
+}
+
+.copy-page.new.camp #copy {
+  text-align: left;
+}
+.copy-page.new.camp #copy h2.info {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.copy-page.new.camp #copy p.main {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 960px) {
+  .copy-page.new.camp #copy h2.info {
+    font-size: 1em;
+  }
+  .copy-page.new.camp #copy p.main {
+    margin-bottom: 2em;
+  }
+}
+.copy-page.new.camp #blocks {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+.copy-page.new.camp #blocks:last-child {
+  margin-right: 0;
+}
+.copy-page.new.camp #blocks li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 2em;
+  min-height: 20rem;
+  background: #758CA0;
+  color: white;
+  background: linear-gradient(to bottom, rgba(117, 140, 160, 0.6), rgba(117, 140, 160, 0.6)), url("http://i.imgur.com/6kVlnod.jpg");
+}
+.copy-page.new.camp #blocks li:last-child {
+  margin-right: 0;
+}
+.copy-page.new.camp #blocks li > * {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+.copy-page.new.camp #blocks li > *:last-child {
+  margin-right: 0;
+}
+.copy-page.new.camp #blocks li h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+.copy-page.new.camp #blocks li p {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 960px) {
+  .copy-page.new.camp #blocks li {
+    min-height: 0;
+  }
+  .copy-page.new.camp #blocks li > * {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .copy-page.new.camp #blocks li > *:last-child {
+    margin-right: 0;
+  }
+  .copy-page.new.camp #blocks li h2 {
+    font-size: 1.5em;
+  }
+}
+.copy-page.new.camp .brumhack {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  background: black;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 2em;
+}
+.copy-page.new.camp .brumhack:last-child {
+  margin-right: 0;
+}
+.copy-page.new.camp .brumhack * {
+  color: #00ff00;
+}
+.copy-page.new.camp .brumhack img {
+  height: 3rem;
+}
+.copy-page.new.camp .brumhack p {
+  margin-top: 1em;
+}
+.copy-page.new.camp .brumhack a {
+  display: inline-block;
+  text-decoration: underline;
+}
+.copy-page.new.camp #form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 2em;
+  display: block;
+}
+.copy-page.new.camp #form:last-child {
+  margin-right: 0;
 }
 
 @media screen and (max-width: 960px) {

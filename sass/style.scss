@@ -159,16 +159,6 @@ $rm-accent: #E81F63;
 				}
 			}
 		}
-		&.camp {
-			background: 
-			linear-gradient(
-				to bottom,
-				rgba($purple, 0.6),
-				rgba($purple, 0.6)),
-				url("http://i.imgur.com/kFzJhBp.gif");
-			background-size: cover;
-			background-position: center center;
-		}
 
 	}
 	
@@ -672,4 +662,5 @@ a.email-us {
 @import "new";
 @import "cms-page";
 @import "throw";
+@import "camp";
 @import "res-tablet";
