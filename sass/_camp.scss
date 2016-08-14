@@ -22,6 +22,21 @@
 		font-size: 1.5em;
 		margin-bottom: 0;
 	}
+	.buttons {
+		margin-top: 2em;
+		.button {
+			padding: 0.5em 1em;
+			background: $purple;
+			display: inline-block;
+			margin-right: 1em;
+			color: white;
+			text-shadow: none;
+			border-radius: 5px;
+			&.focus {
+				background: $rm-accent;
+			}
+		}
+	}
 	@media screen and (max-width: 960px) {
 		font-size: 0.75em;
 		padding: 2em 0;
@@ -65,13 +80,10 @@
 			min-height: 20rem;
 			background: $purple;
 			color: white;
-			background:
-			linear-gradient(
-				to bottom,
-				rgba($purple, 0.6),
-				rgba($purple, 0.6)),
-				url("http://i.imgur.com/6kVlnod.jpg");
-			> * {
+			background-size: cover;
+			background-position: center center;
+			> h2,
+			> p {
 				@include span-columns(8 of 12);
 			}
 			h2 {
@@ -85,7 +97,8 @@
 		@media screen and (max-width: 960px) {
 			li {
 				min-height: 0;
-				> * {
+				> h2,
+				> p {
 					@include span-columns(12);
 				}
 				h2 {

@@ -1231,6 +1231,21 @@ a.launch-blog:hover {
   font-size: 1.5em;
   margin-bottom: 0;
 }
+.big-hero.camp .buttons {
+  margin-top: 2em;
+}
+.big-hero.camp .buttons .button {
+  padding: 0.5em 1em;
+  background: #758CA0;
+  display: inline-block;
+  margin-right: 1em;
+  color: white;
+  text-shadow: none;
+  border-radius: 5px;
+}
+.big-hero.camp .buttons .button.focus {
+  background: #E81F63;
+}
 @media screen and (max-width: 960px) {
   .big-hero.camp {
     font-size: 0.75em;
@@ -1285,18 +1300,21 @@ a.launch-blog:hover {
   min-height: 20rem;
   background: #758CA0;
   color: white;
-  background: linear-gradient(to bottom, rgba(117, 140, 160, 0.6), rgba(117, 140, 160, 0.6)), url("http://i.imgur.com/6kVlnod.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 .copy-page.new.camp #blocks li:last-child {
   margin-right: 0;
 }
-.copy-page.new.camp #blocks li > * {
+.copy-page.new.camp #blocks li > h2,
+.copy-page.new.camp #blocks li > p {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
 }
-.copy-page.new.camp #blocks li > *:last-child {
+.copy-page.new.camp #blocks li > h2:last-child,
+.copy-page.new.camp #blocks li > p:last-child {
   margin-right: 0;
 }
 .copy-page.new.camp #blocks li h2 {
@@ -1310,13 +1328,15 @@ a.launch-blog:hover {
   .copy-page.new.camp #blocks li {
     min-height: 0;
   }
-  .copy-page.new.camp #blocks li > * {
+  .copy-page.new.camp #blocks li > h2,
+  .copy-page.new.camp #blocks li > p {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%;
   }
-  .copy-page.new.camp #blocks li > *:last-child {
+  .copy-page.new.camp #blocks li > h2:last-child,
+  .copy-page.new.camp #blocks li > p:last-child {
     margin-right: 0;
   }
   .copy-page.new.camp #blocks li h2 {
