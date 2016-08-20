@@ -30,7 +30,12 @@
               <li><i class="fa-li fa fa-clock-o"></i> {{ object.frequency }}</li>
               <li><i class="fa-li fa fa-shield"></i> {{ object.contact_name }} - <a href="mailto:{{ object.contact_email }}">{{ object.contact_email }}</a></li>
               <li><i class="fa-li fa fa-twitter"></i> <a href="https://twitter.com/search?f=tweets&amp;q=%23{{ object.hashtag }}" target="_blank">#{{ object.hashtag }}</a></li>
-              <li class="register"><i class="fa-li fa fa-paper-plane"></i> <a href="{{ object.register_link }}">Register</a></li>
+              {% if object.register_link === "#" %}
+                <li class="register"><i class="fa-li fa fa-paper-plane"></i><span>Registration coming soon</span></li>
+              {% endif %}
+              {% if object.register_link !=== "#" %}
+                <li class="register"><i class="fa-li fa fa-paper-plane"></i> <a href="{{ object.register_link }}">Register</a></li>
+              {% endif %}
             </ul>
           </div>
         </div>
