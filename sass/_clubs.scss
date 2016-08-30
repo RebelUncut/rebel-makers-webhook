@@ -31,6 +31,7 @@
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   transition: all 0.2s ease-in-out;
+  min-width: 45%;
 
   .card-image {
     max-height: 20vw;
