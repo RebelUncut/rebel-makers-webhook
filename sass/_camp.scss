@@ -2,8 +2,8 @@
 	background: 
 	linear-gradient(
 		to bottom,
-		rgba($purple, 0.6),
-		rgba($purple, 0.6)),
+		rgba($purple, 0.8),
+		rgba($purple, 0.8)),
 		url("http://i.imgur.com/1GlO72p.jpg");
 	background-size: cover;
 	background-position: center center;
@@ -48,6 +48,9 @@
 		}
 		h2 {
 			margin-bottom: 1em; 
+		}
+		.buttons .button {
+			margin-top: 1em;
 		}
 	}
 }
