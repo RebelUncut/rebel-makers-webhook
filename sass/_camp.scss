@@ -26,14 +26,15 @@
 		margin-top: 2em;
 		.button {
 			padding: 0.5em 1em;
-			background: $purple;
+			background: white;
 			display: inline-block;
 			margin-right: 1em;
-			color: white;
+			color: $purple;
 			text-shadow: none;
 			border-radius: 5px;
 			&.focus {
 				background: $rm-accent;
+				color: white
 			}
 		}
 	}
